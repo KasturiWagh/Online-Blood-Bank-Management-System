@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>About site </title>
+</head>
+<body>
+
+    </style>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">BLOOD MANAGEMENT</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="/information">About us</a></li>
+            <li><a href="/bloodBank">Blood bank contact information</a></li>
+            <li><a href="/donerINFO">doner info</a></li>
+            <li><a href="/show">LIST</a></li>
+            
+
+          </ul>
+        </div>
+      </nav>
+
+      <style>
+          div.row{
+            margin: 30px 200px;
+            width:700px;
+            padding: 5px 35px;
+          }
+
+          .container{  
+        text-align: center;  
+        padding-top: p0,auto;  
+        }  
+
+
+
+      </style>
+
+      {% for info in allinfo %}
+
+
+      <tr>
+        <th scope="Sno">{{loop.index}}</th>
+        <td>{{info.Donername}}</td>
+        <td>{{info.bloodT}}</td>
+        <td>{{info.contactME}}</td>
+        <td>
+
+            {% endfor %}
+          
+      
+
+
+        <!--Section: Contact v.2-->
+<section class="mb-4">
+
+  <!--Section heading-->
+  <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Doner</h2>
+  <!--Section description-->
+  <p class="text-center w-responsive mx-auto mb-5">Your message will be send to requested doner</p>
+
+  <div class="row">
+
+      <!--Grid column-->
+      <div class="col-md-9 mb-md-0 mb-5">
+          <form id="contact-form" name="contact-form" action = "/" method="POST">
+
+              <!--Grid row-->
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0">
+                          <input type="text" id="name" name="name"  value = '{{NAME}}' class="form-control">
+                          <label for="name" class="">Your name</label>
+                      </div>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-md-6 ">
+                      <div class="md-form mb-0">
+                          
+                          <input type="text" id="email"  name="email"  value = '{{CONTACT}}' class="form-control">
+                          <label for="email" class="">Your email</label>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="md-form mb-0">
+                        <input type="text" id="email" name="email" value = '{{info.contactME}}' class="form-control">
+                        <label for="email" class="">Contact information of the doner</label>
+                    </div>
+                </div>
+                  <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="md-form mb-0">
+                          <input type="text" id="subject" name="subject" class="form-control">
+                          <label for="subject" class="">Subject</label>
+                      </div>
+                  </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-12">
+
+                      <div class="md-form">
+                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                          <label for="message">Your message</label>
+                      </div>
+
+                  </div>
+              </div>
+              <!--Grid row-->
+
+          </form>
+
+          <div class="container">  
+                <div class="text-center text-md-left">
+                    <a style="margin: 1cm; width: 30%;" class="btn btn-danger" onclick="document.getElementById('contact-form').submit();MYFunction() ">Send</a>
+                    <script>
+                        function MYFunction() {
+                        alert("Your request is sucessfully send");
+                        }
+                        </script>
+                </div>
+            </div>
+          <div class="status"></div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+ 
+      <!--Grid column-->
+
+  </div>
+
+</section>
+<!--Section: Contact v.2-->
+  
+
+
+    </div>
+</body>
+</html>

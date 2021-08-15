@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+        body{
+          
+          background-repeat: no repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          background-image: url("{{ url_for('static', filename = 'b1.jpg') }}" );   
+        }
+
+
+  </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ url_for('static', filename = 'js/test.js') }}" ></script>
+   
+    <title>Blood Bank</title>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-default"> 
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">BLOOD MANAGEMENT</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="/information">About us</a></li>
+            <li><a href="/bloodBank">Blood bank contact information</a></li>
+            <li><a href="/donerINFO">doner info</a></li>
+            <li><a href="/list3">LIST</a></li>
+            <li><a href="/remove">To delete and remove names</a></li>
+ 
+          </ul>
+        </div>
+      </nav>
+
+
+      
+
+      <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">NEXT DONATION CAMP</h4>
+        <p>
+          <div class="alert alert-danger" role="alert">
+            Blood Donation camp is going to held soon  <a href="/" class="alert-link">LINK FOR DONATION</a>.This is the link if you want to know more about donation camp
+          </div>
+          <div class="alert alert-danger" role="alert">
+            News about blood donation  <a href="#" class="alert-link">News</a>.
+          </div>
+        </p>
+        <hr>
+        <p class="mb-0">Blood donation is a friendly gesture.</p>
+      </div>
+
+
+      
+
+
+      
+      
+      <style> 
+
+      
+        input[type=button], input[type=submit], input[type=reset] {
+          background-color: #fda0a0;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-decoration: none;
+          margin: 10px 10px;
+          width : 250px;
+          cursor: pointer;
+
+
+
+          
+        }
+
+        input[type=submit]:hover {
+           background-color: #fc7474;
+        }
+  
+        form { 
+          margin: 0 auto; 
+          width:250px;
+          
+          
+         }
+         .fa {
+          padding: 10px;
+          font-size: 25px;
+          width: 45px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 50%;
+        }
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+p.b { 
+  position: bottom;
+  bottom: 80px;
+  text-align:center;
+  width: 200px;
+  height: 20px;
+
+
+}
+
+div.cont{
+
+  max-width: 200px;
+  margin: auto;
+
+
+}
+
+
+
+        </style>
+<!--above p.b is for "Share out site small window " we can adjest any thing by using it-->
+
+    <h1 style="color:rgb(255, 255, 255); text-align:center">Blood Bank </h1>   
+    <form method="post" action="/">
+        <input style=" font-size:20px; color:rgb(0, 0, 0); text-align:center " type="submit" value="Doner" name="action1"/>
+        <input style=" font-size:20px; color:rgb(0, 0, 0); text-align:center" type="submit" value="Patient" name="action2" />
+    </form>
+    <div class="container">
+        <h3 style="color:rgb(255, 255, 255); text-align:center " >Blood manegment system</h3>
+  
+    </div>
+
+
+      <div class = "cont">
+
+      <p class = 'b' style="color:rgb(255, 255, 255);font-size:18px;">Share our site </p>
+      <a href="https://www.facebook.com/"  class="fa fa-facebook"></a>
+      <a href="https://www.twitter.com/"  class="fa fa-twitter"></a>
+      <a href="https://in.pinterest.com/" class="fa fa-pinterest"></a>
+      <a href="https://in.linkedin.com/" class="fa fa-linkedin"></a>
+
+    </div>
+
+    <div class = "dot">
+      <p>.</p>
+       </div>
+
+
+</body>
+</html>

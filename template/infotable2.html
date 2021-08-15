@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>     <!--Patiesn _ from show function-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+ 
+</head>
+          <nav class="navbar navbar-default" >
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="/">BLOOD MANAGEMENT</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/information">About us</a></li>
+                <li><a href="/bloodBank">Blood bank contact information</a></li>
+                <li><a href="/donerINFO">doner info</a></li>
+                <li><a href="/show">LIST</a></li>
+                
+
+              </ul>
+            </div>
+          </nav>
+
+        {% if allinfo|length == 0 %}
+
+        <div class="alert alert-danger" role="alert">
+          No Doners avialable <a href="/" class="alert-link">Go to Home page</a>.This will Take you to home page.
+        </div>
+          {% else %}
+          <table class="table">
+            <thead>
+              <tr>
+                  
+                <th scope="col">sno</th>
+                <th scope="col">Name And location</th>
+                <th scope="col">Blood Type</th>
+
+                <th scope="col">contact</th>
+                
+                <th scope="col">Actions</th>
+
+              </tr>
+        
+            </thead>
+            <tbody>
+            
+
+      {% for info in allinfo %}
+      
+      <tr>
+        <th scope="Sno">{{loop.index}}</th>
+        <td>{{info.Donername}}</td>
+        <td>{{info.bloodT}}</td>
+        <td>{{info.contactME}}</td>
+
+
+        <td>
+
+          <a style="margin:5px;" onclick="window.location.href='/sendRequest/{{info.sno}}/{{NAME}}/{{CONTACT}}';MYFunction() " type="button" class="btn btn-danger   ">Request</button>
+            <script>
+              function MYFunction() {
+                alert("Go to send request form");
+              }
+              </script>
+
+          <a  onclick="window.location.href='/information'"type="button" class="btn btn-danger  ">information</button>
+
+        </td>
+      </tr>
+      
+
+      {% endfor %}
+    </tbody> 
+    </table>
+      {% endif %}
+
+
+
+      </tr>
+
+</html>

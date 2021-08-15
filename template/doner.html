@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>For donation</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+
+</head>
+<body>
+   <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">BLOOD MANAGEMENT</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="/information">About us</a></li>
+          <li><a href="/bloodBank">Blood bank contact information</a></li>
+          <li><a href="/donerINFO">doner info</a></li>
+          <li><a href="/">LIST</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <h3  style="text-align:left" >This page is for Doner</h3>
+      <div style="text-align:left; font-size:17px;" >Fill your information.</div>
+
+    </div>
+
+
+ 
+   <form action = "http://localhost:8000/doner" method = "post">
+
+
+
+
+      <p style=" font-size:17px;">Enter Name and location information/Donation camp:</p>
+      <p><input type = "text" name = "nm" /></p>
+
+      <p style=" font-size:17px;">Enter Type of Blood:</p>
+      <p><input type = "text" name = "blood" /></p>
+
+
+      <p style=" font-size:17px;">Enter Contact Information:</p> 
+      <p><input type = "text" name = "contact" /></p>
+
+
+
+
+
+
+        <!--
+      <div class="form-group">
+        <label style=" font-size:15px;" for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+-->
+
+      <div class="col-md-3">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+
+      <div  class="form-group col-md-6">
+        <label  for="inputState">State</label>
+        <select style="border: 1px solid rgb(0, 0, 0);" id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>...</option>
+          <option value="1">Maharashtra</option>
+          <option value="2">Karnataka</option>
+          <option value="3">Gujarat</option>
+          <option value="4">Uttar Pradesh</option>
+        </select>
+      </div>
+
+
+      <div class="form-group col-md-3">
+        <label for="inputCity">Age</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+
+      <p><input type = "submit" value = "submit" /></p>
+      <h3 style="text-align:center" >Blood manegment system</h3>
+
+   </form> 
+
+      
+ 
+
+</body>
+</html>
+
+
+
+

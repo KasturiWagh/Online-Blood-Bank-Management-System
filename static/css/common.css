@@ -1,0 +1,63 @@
+input[type=text], select {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #7fb4fa;
+    color: white;
+    padding: 14px 10px;
+    margin: 8px 0;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #2a86ff;
+  }
+  
+  body{
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 0;
+    
+  }
+
+  form { 
+
+    width:300px;
+    margin: 30px 400px;
+    width:700px;
+    padding: 0, auto;
+   }
+
+   h1 {
+
+    color:black;
+    margin-bottom: 10px;
+ 
+  }
+  
+  div.a {
+    font-size: 150%;
+  }
+
+  .navbar {
+    margin-bottom: 20px;
+  }
+  
+
+
+
+
+
+ 
